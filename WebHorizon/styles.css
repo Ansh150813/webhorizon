@@ -1,0 +1,218 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar with Dropdown */
+.header {
+    background-color: #001c41;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 80px;
+    width: 80px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff7f50;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 10px 20px;
+}
+
+.dropdown a {
+    color: #fff;
+}
+
+.dropdown a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section with a new background color */
+.hero {
+    background-color: #004080; /* Dark Blue */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-top: 15px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Featured News Section */
+.main-content {
+    padding: 50px;
+}
+
+.featured-news {
+    margin-top: 50px;
+}
+
+.featured-news h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333;
+}
+
+.featured-news h2:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #ff7f50;
+    display: block;
+    margin: 10px auto;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-title {
+    font-size: 24px;
+    margin: 15px;
+    color: #333;
+}
+
+.news-summary {
+    font-size: 16px;
+    color: #666;
+    margin: 0 15px 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: #001c41;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #555;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
